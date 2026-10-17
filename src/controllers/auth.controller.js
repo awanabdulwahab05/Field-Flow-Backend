@@ -50,9 +50,9 @@ export const loginAdmin = async (req, res) => {
 
         res.cookie('token', token, {
             httpOnly: true,
-            secure: false,
-            sameSite: 'lax'
-        })
+            secure: true,
+            sameSite: 'none'
+        });
 
         return res.status(200).json({
             message: 'Admin login successful',
@@ -116,9 +116,9 @@ export const registerCustomer = async (req, res) => {
 
         res.cookie('token', token, {
             httpOnly: true,
-            secure: false,
-            sameSite: 'lax'
-        })
+            secure: true,
+            sameSite: 'none'
+        });
 
         return res.status(201).json({
             message: 'Registration successful',
@@ -185,8 +185,8 @@ export const loginCustomer = async (req, res) => {
 
         res.cookie('token', token, {
             httpOnly: true,
-            secure: false,
-            sameSite: 'lax'
+            secure: true,
+            sameSite: 'none'
         })
 
         return res.status(200).json({
@@ -277,8 +277,8 @@ export const loginTechnician = async (req, res) => {
 
         res.cookie('token', token, {
             httpOnly: true,
-            secure: false,
-            sameSite: 'lax'
+            secure: true,
+            sameSite: 'none'
         })
 
         return res.status(200).json({
