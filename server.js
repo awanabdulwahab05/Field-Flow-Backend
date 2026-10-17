@@ -19,7 +19,10 @@ app.use(cookieParser())
 connectDB()
 
 app.use(cors({
-    origin: "http://localhost:5173",
+    origin: [
+        "http://localhost:5173",
+        "https://field-flow-self.vercel.app"
+    ],
     credentials: true
 }));
 
